@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head>
+	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
+</h:head> 
+<body> 
+	<ui:insert name="header">
+		<ui:include src="static/banner.xhtml" />
+		<ui:include src="static/menu.xhtml" />
+	</ui:insert>
+	<div class="container">
+		<p:panelGrid styleClass="tablaPartidos">
+			<f:facet name="header">  
+				<p:row>
+					<p:column colspan="10">Grupo C</p:column>
+				</p:row>
+				<p:row>
+					<p:column>Posición</p:column>
+					<p:column>Equipo</p:column>
+					<p:column>Puntos</p:column>
+					<p:column>PJ</p:column>
+					<p:column>PG</p:column>
+					<p:column>PE</p:column>
+					<p:column>PP</p:column>
+					<p:column>GF</p:column>
+					<p:column>GC</p:column>
+					<p:column>DG</p:column>
+				</p:row>				
+			</f:facet>
+			<p:row>
+				<p:column>1</p:column>
+				<p:column>Colombia</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+			</p:row>
+			<p:row>
+				<p:column>2</p:column>
+				<p:column>Grecia</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+			</p:row>
+			<p:row>
+				<p:column>3</p:column>
+				<p:column>Costa de Marfil</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+			</p:row>
+			<p:row>
+				<p:column>4</p:column>
+				<p:column>Japón</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+				<p:column>0</p:column>
+			</p:row>
+		</p:panelGrid>
+	</div>
+</body> 
+</html>

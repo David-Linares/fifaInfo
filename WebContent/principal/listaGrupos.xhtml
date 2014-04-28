@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body>
+	<h:dataTable value="#{listadoGruposMB.listaGrupos}" var="grupo">
+		<h:column>
+			<f:facet name="header">
+				<h:outputLabel value="#{grupo.nombre}" />
+			</f:facet>
+			<h:dataTable value="#{listadoGruposMB.listaEquipos}" var="equipo">
+				<h:column>
+					<f:facet name="header">
+						<h:outputLabel value="Posición" />
+					</f:facet>
+					<h:outputLabel value="#{equipo.posicion}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputLabel value="Equipo" />
+					</f:facet>
+					<h:outputLabel value="#{equipo.nombre}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputLabel value="Técnico" />
+					</f:facet>
+					<h:outputLabel value="#{equipo.tecnico}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputLabel value="Sigla" />
+					</f:facet>
+					<h:outputLabel value="#{equipo.sigla}" />
+				</h:column>
+			</h:dataTable>
+		</h:column>
+	</h:dataTable>
+</body> 
+</html>

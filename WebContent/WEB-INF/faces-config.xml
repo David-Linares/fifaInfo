@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xi="http://www.w3.org/2001/XInclude"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
+ <managed-bean>
+  <managed-bean-name>principalMB</managed-bean-name>
+  <managed-bean-class>com.fifa.ubosque.worldcup.beans.PrincipalMB</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+  <managed-property>
+   <property-name>rutadinamica</property-name>
+   <property-class>java.lang.String</property-class>
+   <value/>
+  </managed-property>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>listadoGruposMB</managed-bean-name>
+  <managed-bean-class>com.fifa.ubosque.worldcup.beans.ListadoGruposMB</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+  <managed-property>
+   <property-name>equipos</property-name>
+   <property-class>java.util.List</property-class>
+   <value/>
+  </managed-property>
+  <managed-property>
+   <property-name>grupos</property-name>
+   <property-class>java.util.List</property-class>
+   <value/>
+  </managed-property>
+  <managed-property>
+   <property-name>listaEquipos</property-name>
+   <property-class>java.util.List</property-class>
+   <value/>
+  </managed-property>
+  <managed-property>
+   <property-name>listaGrupos</property-name>
+   <property-class>java.util.List</property-class>
+   <value/>
+  </managed-property>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>sesiones</managed-bean-name>
+  <managed-bean-class>com.fifa.ubosque.worldcup.beans.ControlSesionesTemp</managed-bean-class>
+  <managed-bean-scope>session</managed-bean-scope>
+ </managed-bean>
+ <navigation-rule>
+  <from-view-id>/principal/paginas/login.xhtml</from-view-id>
+  <navigation-case>
+   <from-outcome>logueado</from-outcome>
+   <to-view-id>/principal/paginas/index.xhtml</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+</faces-config>

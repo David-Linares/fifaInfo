@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head>
+	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
+</h:head> 
+<body> 
+	<ui:insert name="header">
+		<ui:include src="static/banner.xhtml" />
+		<ui:include src="static/menu.xhtml" />
+	</ui:insert>
+	<div class="container">
+		<p:carousel id="basicCarousel" itemStyle="width:auto; height: auto;" numVisible="1">  
+		    <f:facet name="header">  
+		            Estadios - Sedes
+		    </f:facet>
+		    <h:panelGrid columns="1" style="width:100%" cellpadding="5">
+		        <p:graphicImage value="/resources/images/sedes/arenaPernambuco.jpg"/>   
+		        <h:outputText value="Arena Pernambuco" /> 
+		    </h:panelGrid>
+		    <h:panelGrid columns="1" style="width:100%" cellpadding="5">  
+		        <p:graphicImage value="/resources/images/sedes/arenaAmazonia.jpg"/>   
+		        <h:outputText value="Arena Amazonia" />
+		    </h:panelGrid>  
+		    <h:panelGrid columns="1" style="width:100%" cellpadding="5">  
+		        <p:graphicImage value="/resources/images/sedes/arenaBaixada.jpg"/>   
+		        <h:outputText value="Arena Baixada" />
+		    </h:panelGrid>  
+		    <h:panelGrid columns="1" style="width:100%" cellpadding="5">  
+		        <p:graphicImage value="/resources/images/sedes/arenaFonteNova.jpg"/>   
+		        <h:outputText value="Arena Fonte Nova" />    
+		    </h:panelGrid>  
+		    <h:panelGrid columns="1" style="width:100%" cellpadding="5">  
+		        <p:graphicImage value="/resources/images/sedes/arenaPantanal.jpg"/>   
+		        <h:outputText value="Arena Pantanal" />  
+		    </h:panelGrid>  
+		    <h:panelGrid columns="1" style="width:100%" cellpadding="5">  
+		        <p:graphicImage value="/resources/images/sedes/arenaSaoPaulo.jpg"/>   
+		        <h:outputText value="Arena Sao Paulo" />  
+		    </h:panelGrid>
+		    <h:panelGrid columns="1" style="width:100%" cellpadding="5">  
+		        <p:graphicImage value="/resources/images/sedes/estadioBeiraRio.jpg"/>   
+		        <h:outputText value="Estadio Beira Rio" />  
+		    </h:panelGrid>
+		    <h:panelGrid columns="1" style="width:100%" cellpadding="5">  
+		        <p:graphicImage value="/resources/images/sedes/estadioCastelao.jpg"/>   
+		        <h:outputText value="Estadio Castelao" />
+		    </h:panelGrid>
+		    <h:panelGrid columns="1" style="width:100%" cellpadding="5">  
+		        <p:graphicImage value="/resources/images/sedes/estadioDasDunas.jpg"/>   
+		        <h:outputText value="Estadios Das Dunas" />  
+		    </h:panelGrid>
+		    <h:panelGrid columns="1" style="width:100%" cellpadding="5">  
+		        <p:graphicImage value="/resources/images/sedes/estadioMaracana.jpg"/>   
+		        <h:outputText value="Estadio Maracana" />  
+		    </h:panelGrid>
+		    <h:panelGrid columns="1" style="width:100%" cellpadding="5">  
+		        <p:graphicImage value="/resources/images/sedes/estadioMineirao.jpg"/>   
+		        <h:outputText value="Estadio Mineirao" />  
+		    </h:panelGrid>
+		    <h:panelGrid columns="1" style="width:100%" cellpadding="5">  
+		        <p:graphicImage value="/resources/images/sedes/estadioNacional.jpg"/>   
+		        <h:outputText value="Estadio Nacional" />  
+		    </h:panelGrid>
+		</p:carousel>
+	</div>
+</body> 
+</html>
