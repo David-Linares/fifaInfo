@@ -15,32 +15,19 @@
 	</ui:insert>
 	<div class="container">
 		<form>
-			<h:commandButton value="Loguear Como Admin" action="logueado">
-				<f:setPropertyActionListener target="#{sesiones.administrador}" value="true" />
-			</h:commandButton>
-			<h:outputLabel value="#{sesiones.administrador}" />
-			<br></br>
-			<h:outputLink value="#{sesiones.setCoordinador()}">Log as Coordinador</h:outputLink>
-			<h:outputLabel value="#{sesiones.coordinador}" />
+			<p:panelGrid columns="2">
+				<f:facet name="header">
+					Login
+				</f:facet>
+				<h:outputLabel value="Usuario" />
+				<h:inputText />
+				<h:outputLabel value="Contraseña" />
+				<h:inputSecret />
+				<f:facet name="footer">
+					<h:commandButton value="Ingresar" />
+				</f:facet>
+			</p:panelGrid>
 		</form>
-		
-		<p:dialog id="modalDialog" header="Modal Dialog" widgetVar="dlg2" modal="true" height="100">  
-		    <h:outputText value="#{sesiones.administrador}" />  
-		</p:dialog> 
-		<!-- <div class="containerLogin">
-			<form>x
-				<h1>Login</h1>
-				<h:panelGrid columns="2">
-					<h:outputLabel value="Usuario" />
-					<h:inputText />
-					<h:outputLabel value="Contraseña" />
-					<h:inputSecret/>
-				</h:panelGrid>
-				<h:panelGrid columns="1">
-					<h:commandButton value="Ingresar"  />
-				</h:panelGrid>
-			</form>
-		</div> -->
 	</div>
 </body> 
 </html>
