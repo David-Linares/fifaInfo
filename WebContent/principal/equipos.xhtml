@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
+</h:head>
+<body>
+	<ui:insert name="header">
+		<ui:include src="../static/banner.xhtml" />
+		<ui:include src="../static/menu.xhtml" />
+	</ui:insert>
+	<h:form>
+	<div class="container">
+		<h:messages globalOnly="false" showDetail="true"/>
+		<p:panelGrid>
+			<f:facet name="header">
+				<p:row>
+					<p:column>AFC</p:column>
+					<p:column>CAF</p:column>
+					<p:column>CONCACAF</p:column>
+					<p:column>CONMEBOL</p:column>
+					<p:column>OFC</p:column>
+					<p:column>UEFA</p:column>
+				</p:row>
+			</f:facet>
+			<p:row>
+				<p:column>
+					<h:commandLink value="Australia" action="listarEquipo" />
+				</p:column>
+				<p:column>
+					<h:outputLink>Argelia</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Estados</h:outputLink> Unidos</p:column>
+				<p:column>
+					<h:outputLink>Brasil</h:outputLink>
+				</p:column>
+				<p:column rowspan="13">
+					<h:outputLink>Nueva Zelanda</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Alemania</h:outputLink>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column>
+					<h:outputLink>Corea del Sur</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Camerún</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Costa Rica</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Argentina</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Bélgica</h:outputLink>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column>
+					<h:outputLink>Irán</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Costa de Marfil</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Honduras</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Colombia</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Bosnia y Hersegovina</h:outputLink>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column>
+					<h:outputLink>Japón</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Ghana</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>México</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Chile</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Croacia</h:outputLink>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column rowspan="9"></p:column>
+				<p:column>
+					<h:outputLink>Nigeria</h:outputLink>
+				</p:column>
+				<p:column rowspan="9"></p:column>
+				<p:column>
+					<h:outputLink>Ecuador</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>España</h:outputLink>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column rowspan="8"></p:column>
+				<p:column>
+					<h:outputLink>Uruguay</h:outputLink>
+				</p:column>
+				<p:column>
+					<h:outputLink>Francia</h:outputLink>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column rowspan="7"></p:column>
+				<p:column>
+					<h:outputLink>Grecia</h:outputLink>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column>
+					<h:outputLink>Holanda</h:outputLink>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column>
+					<h:outputLink>Inglaterra</h:outputLink>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column>
+					<h:outputLink>Italia</h:outputLink>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column>
+					<h:outputLink>Portugal</h:outputLink>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column>
+					<h:outputLink>Rusia</h:outputLink>
+				</p:column>
+			</p:row>
+			<p:row>
+				<p:column>
+					<h:outputLink>Suiza</h:outputLink>
+				</p:column>
+			</p:row>
+		</p:panelGrid>
+	</div>
+	</h:form>
+</body>
+</html>

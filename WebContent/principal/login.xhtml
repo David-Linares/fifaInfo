@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head>
+	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
+	<script type="" src="../../resources/scripts/jquery-1.11.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#formLogin").submit(function(event){
+				$("#formLogin\\:usuarioLogin").removeClass('inputError');
+				$("#formLogin\\:passwordLogin").removeClass('inputError');
+				if($("#formLogin\\:passwordLogin").val() == ""){
+					event.preventDefault();
+					$("#formLogin\\:passwordLogin").addClass('inputError');
+					console.log($("#errorMsgLogin"));
+					$("#formLogin\\:passwordLogin").focus();
+				}
+				if($("#formLogin\\:usuarioLogin").val() == ""){
+					event.preventDefault();
+					$("#formLogin\\:usuarioLogin").addClass('inputError');
+					$("#formLogin\\:usuarioLogin").focus();
+				}
+			})
+		})
+	</script>
+</h:head>
+<body> 
+	<ui:insert name="header">
+		<ui:include src="../static/banner.xhtml" />
+		<ui:include src="../static/menu.xhtml" />
+	</ui:insert>
+	<div class="container">
+		<h:form id="formLogin">
+			<p:panelGrid columns="2">
+				<f:facet name="header">
+					<h:outputLabel value="Login" styleClass="letra" />
+				</f:facet>
+				<h:outputLabel value="User" styleClass="letra"/>
+				<h:inputText value="#{ingreso.usuarioLogin}" id="usuarioLogin"/>
+				<h:outputLabel value="Password" styleClass="letra"/>
+				<h:inputSecret value="#{ingreso.passwordLogin}" id="passwordLogin"/>
+				<f:facet name="footer">
+					<h:commandButton value="Ingresar" action="#{ingreso.iniciarSesion()}" styleClass="letra"/>
+				</f:facet>
+			</p:panelGrid>
+		</h:form>
+		<h:outputLabel value="#{ingreso.error}" styleClass="msgError letra" rendered="#{ingreso.mostrarError}" id="errorMsgLogin"/>
+	</div>
+</body>
+</html>

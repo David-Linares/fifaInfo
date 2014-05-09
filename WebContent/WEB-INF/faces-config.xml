@@ -39,14 +39,12 @@
  </managed-bean>
  <managed-bean>
   <managed-bean-name>sesiones</managed-bean-name>
-  <managed-bean-class>com.fifa.ubosque.worldcup.beans.ControlSesionesTemp</managed-bean-class>
+  <managed-bean-class>com.fifa.ubosque.worldcup.session.ControlSession</managed-bean-class>
   <managed-bean-scope>session</managed-bean-scope>
  </managed-bean>
- <navigation-rule>
-  <from-view-id>/principal/paginas/login.xhtml</from-view-id>
-  <navigation-case>
-   <from-outcome>logueado</from-outcome>
-   <to-view-id>/principal/paginas/index.xhtml</to-view-id>
-  </navigation-case>
- </navigation-rule>
+ <managed-bean>
+  <managed-bean-name>ingreso</managed-bean-name>
+  <managed-bean-class>com.fifa.ubosque.worldcup.beans.Ingreso</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
 </faces-config>

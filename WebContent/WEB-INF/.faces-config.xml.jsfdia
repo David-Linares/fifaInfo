@@ -1,14 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<PROCESS model-entity="JSFProcess">
- <PROCESS-ITEM NAME="rules:#principal#paginas#login.xhtml"
-  PATH="/principal/paginas/login.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
-  <PROCESS-ITEM ID="rules:#principal#paginas#login.xhtml:0" NAME="item"
-   PATH="/principal/paginas/login.xhtml" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT ID="logueado::#principal#paginas#index.xhtml"
-    NAME="output" PATH="/principal/paginas/index.xhtml"
-    TARGET="rules:#principal#paginas#index.xhtml" TITLE="logueado" model-entity="JSFProcessItemOutput"/>
-  </PROCESS-ITEM>
- </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules:#principal#paginas#index.xhtml"
-  PATH="/principal/paginas/index.xhtml" SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
-</PROCESS>
+<PROCESS model-entity="JSFProcess"/>

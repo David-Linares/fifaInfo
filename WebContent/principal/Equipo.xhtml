@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">  
+
+<h:head>
+	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
+</h:head> 
+<body> 
+	<ui:insert name="header">
+		<ui:include src="static/banner.xhtml" />
+		<ui:include src="static/menu.xhtml" />
+	</ui:insert>
+	<div class="container">
+		<form>
+			<p:panelGrid columns="2">
+				<f:facet name="header">
+					Australia
+				</f:facet>
+				<h:outputLabel value="Siglas" />
+				<h:outputLabel value="AUS" />
+				<h:outputLabel value="Director Tecnico" />
+				<h:outputLabel value="PEPE" />
+				<h:outputLabel value="Capitan" />
+				<h:outputLabel value="Pepe2" />
+				<h:outputLabel value="Logo" />
+				<h:outputLabel value="pepe3" />
+				<h:outputLabel value="Bandera" />
+				<h:outputLabel value="pepe4" />
+			</p:panelGrid>
+		</form>
+	</div>
+</body> 
+</html>

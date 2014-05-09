@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/05/2014 08:40:07 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.fifa.ubosque.worldcup.entities.Partidos" table="partidos" catalog="worldcup2014">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="estadosPartidos" class="com.fifa.ubosque.worldcup.entities.EstadosPartidos" fetch="select">
+            <column name="id_estado_partido" not-null="true" />
+        </many-to-one>
+        <many-to-one name="arbitrosByArbitro5" class="com.fifa.ubosque.worldcup.entities.Arbitros" fetch="select">
+            <column name="arbitro_5" />
+        </many-to-one>
+        <many-to-one name="arbitrosByArbitro1" class="com.fifa.ubosque.worldcup.entities.Arbitros" fetch="select">
+            <column name="arbitro_1" not-null="true" />
+        </many-to-one>
+        <many-to-one name="arbitrosByArbitro2" class="com.fifa.ubosque.worldcup.entities.Arbitros" fetch="select">
+            <column name="arbitro_2" />
+        </many-to-one>
+        <many-to-one name="equiposByEquipoVisitante" class="com.fifa.ubosque.worldcup.entities.Equipos" fetch="select">
+            <column name="equipo_visitante" not-null="true" />
+        </many-to-one>
+        <many-to-one name="arbitrosByArbitro3" class="com.fifa.ubosque.worldcup.entities.Arbitros" fetch="select">
+            <column name="arbitro_3" />
+        </many-to-one>
+        <many-to-one name="arbitrosByArbitro4" class="com.fifa.ubosque.worldcup.entities.Arbitros" fetch="select">
+            <column name="arbitro_4" />
+        </many-to-one>
+        <many-to-one name="estadios" class="com.fifa.ubosque.worldcup.entities.Estadios" fetch="select">
+            <column name="sede" not-null="true" />
+        </many-to-one>
+        <many-to-one name="equiposByEquipoLocal" class="com.fifa.ubosque.worldcup.entities.Equipos" fetch="select">
+            <column name="equipo_local" not-null="true" />
+        </many-to-one>
+        <property name="fase" type="string">
+            <column name="fase" length="100" not-null="true" />
+        </property>
+        <property name="golesLocal" type="int">
+            <column name="goles_local" not-null="true" />
+        </property>
+        <property name="golesVisitante" type="int">
+            <column name="goles_visitante" not-null="true" />
+        </property>
+        <property name="autogolesLocal" type="int">
+            <column name="autogoles_local" not-null="true" />
+        </property>
+        <property name="autogolesVisitante" type="int">
+            <column name="autogoles_visitante" not-null="true" />
+        </property>
+        <property name="penaltiesLocal" type="int">
+            <column name="penalties_local" not-null="true" />
+        </property>
+        <property name="penaltiesVisitante" type="int">
+            <column name="penalties_visitante" not-null="true" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="fecha" length="19" not-null="true" />
+        </property>
+        <set name="descripcions" table="descripcion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_partido" not-null="true" />
+            </key>
+            <one-to-many class="com.fifa.ubosque.worldcup.entities.Descripcion" />
+        </set>
+    </class>
+</hibernate-mapping>

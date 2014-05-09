@@ -1,3 +1,7 @@
+@font-face{
+	font-family: worldCup;
+	src:url(../resources/fonts/World_Cup.ttf);
+}
 *{
 	margin:0;
 	padding:0;
@@ -8,6 +12,9 @@ a{
 }
 a:VISITED{
 	color: #00356a;
+}
+input[type=text],input[type=password]{
+	outline: none;
 }
 .banner{
 	height: 100px;
@@ -68,4 +75,18 @@ ul.menuEnc li:hover{
 .iconAdd{
 	margin-left:920px;
 	margin-bottom: 20px;
+}
+.msgError{
+	padding: 5px;
+	border: 2px solid #cc0000;
+	background-color: #f80000;
+	margin: 10px;
+}
+.inputError{
+	box-shadow: 0px 0px 5px #FF2727;
+	border: solid 1px #FF1313;
+}
+.letra{
+	font-family: worldCup !important;
+	font-weight: normal;
 }

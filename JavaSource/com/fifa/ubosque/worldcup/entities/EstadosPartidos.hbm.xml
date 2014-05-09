@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/05/2014 08:40:07 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.fifa.ubosque.worldcup.entities.EstadosPartidos" table="estados_partidos" catalog="worldcup2014">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="estadoPartido" type="string">
+            <column name="estado_partido" length="100" />
+        </property>
+        <set name="partidoses" table="partidos" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_estado_partido" not-null="true" />
+            </key>
+            <one-to-many class="com.fifa.ubosque.worldcup.entities.Partidos" />
+        </set>
+    </class>
+</hibernate-mapping>

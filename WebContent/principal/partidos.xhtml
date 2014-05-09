@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
+</h:head>
+<body>
+	<ui:insert name="header">
+		<ui:include src="../static/banner.xhtml" />
+		<ui:include src="../static/menu.xhtml" />
+	</ui:insert>
+	<div class="container">
+		<h:commandButton image="/resources/images/icons/add.png"
+			id="dynamicDialogButton" onclick="PF('dlg').show();"
+			styleClass="iconAdd"></h:commandButton>
+		<p:accordionPanel>
+			<p:tab title="Fase de Grupos">
+				<p:accordionPanel>
+					<p:tab title="Grupo A">
+						<p:panelGrid columns="5" styleClass="tablaPartidos">
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Brasil" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Croacia" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="México" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Camerún" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+						</p:panelGrid>
+					</p:tab>
+					<p:tab title="Grupo B">
+						<p:panelGrid columns="5" styleClass="tablaPartidos">
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="España" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Holanda" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Chile" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Australia" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+						</p:panelGrid>
+					</p:tab>
+					<p:tab title="Grupo C">
+						<p:panelGrid columns="5" styleClass="tablaPartidos">
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Colombia" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Grecia" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Costa de Marfil" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Japón" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+						</p:panelGrid>
+					</p:tab>
+					<p:tab title="Grupo D">
+						<p:panelGrid columns="5" styleClass="tablaPartidos">
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Uruguay" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Costa Rica" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Inglaterra" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Italia" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+						</p:panelGrid>
+					</p:tab>
+					<p:tab title="Grupo E">
+						<p:panelGrid columns="5" styleClass="tablaPartidos">
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Suiza" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Ecuador" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Francia" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Honduras" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+						</p:panelGrid>
+					</p:tab>
+					<p:tab title="Grupo F">
+						<p:panelGrid columns="5" styleClass="tablaPartidos">
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Argentina" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Bosnia Y herzegovina" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Irán" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Nigeria" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+						</p:panelGrid>
+					</p:tab>
+					<p:tab title="Grupo G">
+						<p:panelGrid columns="5" styleClass="tablaPartidos">
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Alemania" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Portugal" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Ghana" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Estados Unidos" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+						</p:panelGrid>
+					</p:tab>
+					<p:tab title="Grupo H">
+						<p:panelGrid columns="5" styleClass="tablaPartidos">
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Bélgica" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Algeria" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+							<h:outputLabel value="Rusia" />
+							<h:outputLabel value="VS" />
+							<h:outputLabel value="Corea del Sur" />
+							<h:inputText value="0" styleClass="marcadorInput"
+								readonly="false" />
+						</p:panelGrid>
+					</p:tab>
+				</p:accordionPanel>
+			</p:tab>
+			<p:tab title="Segunda Fase">
+
+			</p:tab>
+		</p:accordionPanel>
+	</div>
+</body>
+</html>
