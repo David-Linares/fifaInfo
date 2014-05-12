@@ -26,8 +26,12 @@ public class PartidosLogica {
 	}
 	
 	public List consultarFases(){
-		return null;
+		String sql = "select f from Fases as f";
+		Session session = HibernateUtil.getSf(filename).getCurrentSession();
+		session.beginTransaction();
+		Query query = session.createQuery(sql);
+		List<Grupos> listaFases = query.list();
+		session.getTransaction().commit();
+		return listaFases;
 	}
-	
-
 }

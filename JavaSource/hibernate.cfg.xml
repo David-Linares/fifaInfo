@@ -16,6 +16,7 @@
         <mapping resource="com/fifa/ubosque/worldcup/entities/Equipos.hbm.xml"/>
         <mapping resource="com/fifa/ubosque/worldcup/entities/Estadios.hbm.xml"/>
         <mapping resource="com/fifa/ubosque/worldcup/entities/EstadosPartidos.hbm.xml"/>
+        <mapping resource="com/fifa/ubosque/worldcup/entities/Fases.hbm.xml"/>
         <mapping resource="com/fifa/ubosque/worldcup/entities/Grupos.hbm.xml"/>
         <mapping resource="com/fifa/ubosque/worldcup/entities/Jugadores.hbm.xml"/>
         <mapping resource="com/fifa/ubosque/worldcup/entities/Pais.hbm.xml"/>

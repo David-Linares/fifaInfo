@@ -29,7 +29,7 @@ public class EstadiosLogica {
 	public List consultarEstadios(){
 		String sql = "select e from Estadios as e";
 
-		Session session = HibernateUtil.getSf("hibernate2.cfg.xml")
+		Session session = HibernateUtil.getSf(filename)
 				.getCurrentSession();
 		session.beginTransaction();
 

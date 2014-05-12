@@ -7,7 +7,7 @@
 
 <h:head>
 	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
-	<h:outputScript name="scripts/jquery-1.11.1.js"></h:outputScript>
+	<!-- <h:outputScript name="scripts/jquery-1.11.1.js"></h:outputScript> -->
 	<h:outputScript name="scripts/scripts.js"></h:outputScript>
 </h:head>
 <body>
@@ -19,13 +19,19 @@
 	</div>
 	<div class="container">
 		<h1>Listado de Partidos</h1>
-		<p:accordionPanel value="">
-			
+		<p:accordionPanel value="#{partidosMB.listFases}" var="fase">
+			<p:tab title="#{fase.nombre}" >
+				<p:accordionPanel value="#{gruposMB.listaGrupos}" var="grupo">
+					<p:tab title="#{grupo.nombre}">
+						
+					</p:tab>
+				</p:accordionPanel>
+			</p:tab>
 		</p:accordionPanel>
 		<p:accordionPanel>
 			<p:tab title="Fase de Grupos" styleClass="letra">
 				<p:accordionPanel styleClass="acordeonPartidos">
-					<p:tab title="Grupo A">
+					<p:tab title="Grupo A" >
 						<p:panelGrid columns="5" styleClass="tablaPartidos">
 							<h:inputText value="0" styleClass="marcadorInput"
 								readonly="false" />
