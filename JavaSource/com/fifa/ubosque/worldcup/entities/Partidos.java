@@ -1,6 +1,6 @@
 package com.fifa.ubosque.worldcup.entities;
 
-// Generated 6/05/2014 08:40:07 AM by Hibernate Tools 3.4.0.CR1
+// Generated 12/05/2014 04:16:43 PM by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import java.util.HashSet;

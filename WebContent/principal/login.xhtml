@@ -7,7 +7,8 @@
 
 <h:head>
 	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
-	<script type="" src="../../resources/scripts/jquery-1.11.1.js"></script>
+	<h:outputScript name="scripts/jquery-1.11.1.js"></h:outputScript>
+	<h:outputScript name="scripts/scripts.js"></h:outputScript>
 	<script>
 		$(document).ready(function(){
 			$("#formLogin").submit(function(event){
@@ -16,7 +17,6 @@
 				if($("#formLogin\\:passwordLogin").val() == ""){
 					event.preventDefault();
 					$("#formLogin\\:passwordLogin").addClass('inputError');
-					console.log($("#errorMsgLogin"));
 					$("#formLogin\\:passwordLogin").focus();
 				}
 				if($("#formLogin\\:usuarioLogin").val() == ""){
@@ -28,11 +28,13 @@
 		})
 	</script>
 </h:head>
-<body> 
-	<ui:insert name="header">
-		<ui:include src="../static/banner.xhtml" />
-		<ui:include src="../static/menu.xhtml" />
-	</ui:insert>
+<body>
+	<div id="StaticMenu" class="">
+		<ui:insert name="header">
+			<ui:include src="../static/banner.xhtml" />
+			<ui:include src="../static/menu.xhtml" />
+		</ui:insert>
+	</div>
 	<div class="container">
 		<h:form id="formLogin">
 			<p:panelGrid columns="2">
@@ -40,9 +42,9 @@
 					<h:outputLabel value="Login" styleClass="letra" />
 				</f:facet>
 				<h:outputLabel value="User" styleClass="letra"/>
-				<h:inputText value="#{ingreso.usuarioLogin}" id="usuarioLogin"/>
+				<h:inputText value="#{ingreso.usuarioLogin}" id="usuarioLogin" required="true" label="Usuario"/>
 				<h:outputLabel value="Password" styleClass="letra"/>
-				<h:inputSecret value="#{ingreso.passwordLogin}" id="passwordLogin"/>
+				<h:inputSecret value="#{ingreso.passwordLogin}" id="passwordLogin" required="true" label="Contraseña"/>
 				<f:facet name="footer">
 					<h:commandButton value="Ingresar" action="#{ingreso.iniciarSesion()}" styleClass="letra"/>
 				</f:facet>

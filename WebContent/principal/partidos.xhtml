@@ -7,19 +7,24 @@
 
 <h:head>
 	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
+	<h:outputScript name="scripts/jquery-1.11.1.js"></h:outputScript>
+	<h:outputScript name="scripts/scripts.js"></h:outputScript>
 </h:head>
 <body>
-	<ui:insert name="header">
-		<ui:include src="../static/banner.xhtml" />
-		<ui:include src="../static/menu.xhtml" />
-	</ui:insert>
+	<div id="StaticMenu" class="">
+		<ui:insert name="header">
+			<ui:include src="../static/banner.xhtml" />
+			<ui:include src="../static/menu.xhtml" />
+		</ui:insert>
+	</div>
 	<div class="container">
-		<h:commandButton image="/resources/images/icons/add.png"
-			id="dynamicDialogButton" onclick="PF('dlg').show();"
-			styleClass="iconAdd"></h:commandButton>
+		<h1>Listado de Partidos</h1>
+		<p:accordionPanel value="">
+			
+		</p:accordionPanel>
 		<p:accordionPanel>
-			<p:tab title="Fase de Grupos">
-				<p:accordionPanel>
+			<p:tab title="Fase de Grupos" styleClass="letra">
+				<p:accordionPanel styleClass="acordeonPartidos">
 					<p:tab title="Grupo A">
 						<p:panelGrid columns="5" styleClass="tablaPartidos">
 							<h:inputText value="0" styleClass="marcadorInput"
@@ -38,6 +43,9 @@
 								readonly="false" />
 						</p:panelGrid>
 					</p:tab>
+				</p:accordionPanel>
+				
+				<p:accordionPanel styleClass="acordeonPartidos">
 					<p:tab title="Grupo B">
 						<p:panelGrid columns="5" styleClass="tablaPartidos">
 							<h:inputText value="0" styleClass="marcadorInput"
@@ -56,6 +64,9 @@
 								readonly="false" />
 						</p:panelGrid>
 					</p:tab>
+				</p:accordionPanel>
+				<!-- 
+				<p:accordionPanel>
 					<p:tab title="Grupo C">
 						<p:panelGrid columns="5" styleClass="tablaPartidos">
 							<h:inputText value="0" styleClass="marcadorInput"
@@ -74,6 +85,8 @@
 								readonly="false" />
 						</p:panelGrid>
 					</p:tab>
+				</p:accordionPanel>
+				<p:accordionPanel>
 					<p:tab title="Grupo D">
 						<p:panelGrid columns="5" styleClass="tablaPartidos">
 							<h:inputText value="0" styleClass="marcadorInput"
@@ -92,6 +105,8 @@
 								readonly="false" />
 						</p:panelGrid>
 					</p:tab>
+				</p:accordionPanel>
+				<p:accordionPanel>
 					<p:tab title="Grupo E">
 						<p:panelGrid columns="5" styleClass="tablaPartidos">
 							<h:inputText value="0" styleClass="marcadorInput"
@@ -110,6 +125,8 @@
 								readonly="false" />
 						</p:panelGrid>
 					</p:tab>
+				</p:accordionPanel>
+				<p:accordionPanel>
 					<p:tab title="Grupo F">
 						<p:panelGrid columns="5" styleClass="tablaPartidos">
 							<h:inputText value="0" styleClass="marcadorInput"
@@ -128,6 +145,8 @@
 								readonly="false" />
 						</p:panelGrid>
 					</p:tab>
+				</p:accordionPanel>
+				<p:accordionPanel>
 					<p:tab title="Grupo G">
 						<p:panelGrid columns="5" styleClass="tablaPartidos">
 							<h:inputText value="0" styleClass="marcadorInput"
@@ -146,6 +165,8 @@
 								readonly="false" />
 						</p:panelGrid>
 					</p:tab>
+				</p:accordionPanel>
+				<p:accordionPanel>
 					<p:tab title="Grupo H">
 						<p:panelGrid columns="5" styleClass="tablaPartidos">
 							<h:inputText value="0" styleClass="marcadorInput"
@@ -164,10 +185,10 @@
 								readonly="false" />
 						</p:panelGrid>
 					</p:tab>
-				</p:accordionPanel>
+				</p:accordionPanel> -->
 			</p:tab>
 			<p:tab title="Segunda Fase">
-
+				
 			</p:tab>
 		</p:accordionPanel>
 	</div>

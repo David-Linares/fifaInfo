@@ -67,8 +67,10 @@ public class Ingreso{
 		usuarioSesion = nuevaSesion.login(this.usuarioLogin, this.passwordLogin);
 		
 		if (!usuarioSesion.isEmpty()) {
-			nuevaSesion.setSesion(usuarioSesion);
-			return "iniciarSesion";
+			if(usuarioSesion.get(0).getPerfiles().getId() == 1){
+				return "adminSesion";
+			}
+			return null;
 		}else{
 			this.setError("Usuario o Contraseña Incorrectas");
 			return null;

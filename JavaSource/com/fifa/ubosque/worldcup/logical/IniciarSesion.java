@@ -13,10 +13,12 @@ import com.fifa.ubosque.worldcup.session.*;
 
 public class IniciarSesion {
 	
+	private String filename = "hibernate.cfg.xml";
+	
 	public List login(String nick, String pass){
 		String consulta = "select u from Usuarios as u where nick = '"+nick+"' and contrasena = '"+pass+"'";
 		
-		Session session = HibernateUtil.getSf().getCurrentSession();
+		Session session = HibernateUtil.getSf(filename).getCurrentSession();
 		
 		session.beginTransaction();
 		

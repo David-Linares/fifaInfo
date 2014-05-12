@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head>
+	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
+</h:head> 
+<body>
+	<ui:insert name="header">
+		<ui:include src="../static/banner.xhtml" />
+		<ui:include src="../static/menuAdmin.xhtml" />
+	</ui:insert>
+	
+	<div class="container">
+		<h:form>
+			<h1>Administrar Grupos</h1>
+			<p:panelGrid columns="2">
+				<f:facet name="header"><h3>Crear / Modificar Grupo</h3></f:facet>
+				<h:outputLabel value="Nombre del Grupo" styleClass="label"/>
+				<h:inputText value="#{gruposMB.nombre}" required="true"/>
+				<f:facet name="footer">
+					<h:commandButton action="#{gruposMB.crearGrupos()}" value="Guardar Grupo"  styleClass="botonesAlineados" />					
+				</f:facet>
+			</p:panelGrid>
+		</h:form>
+		<h:outputLabel value="#{gruposMB.success}" styleClass=""></h:outputLabel>
+		<h:outputLabel value="#{gruposMB.error}" rendered="#{gruposMB.error != null}" styleClass="msgError" ></h:outputLabel>
+		<br></br>
+		<h:form>
+			<p:dataTable value="#{gruposMB.listaGrupos}" var="grupo">
+				<p:column>
+					<f:facet name="header"><h:outputLabel value="#" /></f:facet>
+					<h:outputLabel value="#{grupo.id}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header"><h:outputLabel value="Grupo" /></f:facet>
+					<h:outputLabel value="#{grupo.nombre}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">
+						<h:commandButton action="#{gruposMB.consultarGrupos()}" image="../resources/images/icons/actualizar.png" styleClass="botonesAlineados" />
+					</f:facet>
+					<h:commandButton action="#{gruposMB.eliminarGrupo()}" value="Eliminar Grupo">
+						<f:setPropertyActionListener target="#{gruposMB.grupoSeleccionado}" value="#{grupo}">					
+						</f:setPropertyActionListener>
+					</h:commandButton>
+					<h:commandButton action="#{gruposMB.editarGrupo()}" value="Editar Grupo">
+						<f:setPropertyActionListener target="#{gruposMB.grupoSeleccionado}" value="#{grupo}">					
+						</f:setPropertyActionListener>
+					</h:commandButton>
+				</p:column>
+					<f:facet name="header">
+					</f:facet>
+			</p:dataTable>
+		</h:form>
+	</div>
+</body> 
+</html>

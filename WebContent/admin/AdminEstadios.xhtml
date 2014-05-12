@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head>
+	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
+</h:head> 
+<body>
+	<ui:insert name="header">
+		<ui:include src="../static/banner.xhtml" />
+		<ui:include src="../static/menuAdmin.xhtml" />
+	</ui:insert>
+	
+	<div class="container">
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Nombre del Estadio"/>
+				<h:inputText value="#{estadiosMB.nombre_estadio}" required="true"/>
+				<h:outputLabel value="Nombre de la Sede" />
+				<h:inputText value="#{estadiosMB.sede}" required="true"/>
+				<h:outputLabel value="Capacidad de Espectadores" />
+				<h:inputText value="#{estadiosMB.capacidad}" required="true"/>
+				<h:outputLabel value="Temperatura de la Sede" />
+				<h:inputText value="#{estadiosMB.temperatura}" required="true"/>
+			</h:panelGrid>
+			<h:panelGrid columns="1">
+				<h:commandButton action="#{estadiosMB.crearEstadio()}" value="Crear Nuevo Estadio" />
+			</h:panelGrid>
+			<p:dataTable value="#{estadiosMB.estadios}" var="estadio">
+				<p:column>
+					<f:facet name="header"><h:outputLabel value="Estadio" /></f:facet>
+					<h:outputLabel value="#{estadio.nombreOficial}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header"><h:outputLabel value="Sede" /></f:facet>
+					<h:outputLabel value="#{estadio.sede}" />
+				</p:column>				
+				<p:column>
+					<f:facet name="header"><h:outputLabel value="Capacidad" /></f:facet>
+					<h:outputLabel value="#{estadio.capacidad}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header"><h:outputLabel value="Temperatura" /></f:facet>
+					<h:outputLabel value="#{estadio.temperatura}" />
+				</p:column>
+			</p:dataTable>
+			<h:panelGrid columns="1">
+				<h:commandButton action="#{estadiosMB.crearEstadio()}" value="Editar Estadio" />
+			</h:panelGrid>
+			<h:panelGrid columns="1">
+				<h:commandButton action="#{estadiosMB.crearEstadio()}" value="Eliminar Estadio" />
+			</h:panelGrid>
+		</h:form>
+	</div>
+</body> 
+</html>

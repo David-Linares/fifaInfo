@@ -7,15 +7,45 @@
 
 <h:head>
 	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
+	<h:outputScript name="scripts/jquery-1.11.1.js"></h:outputScript>
+	<h:outputScript name="scripts/scripts.js"></h:outputScript>
 </h:head>
 <body>
-	<ui:insert name="header">
-		<ui:include src="../static/banner.xhtml" />
-		<ui:include src="../static/menu.xhtml" />
-	</ui:insert>
+	<div id="StaticMenu" class="">
+		<ui:insert name="header">
+			<ui:include src="../static/banner.xhtml" />
+			<ui:include src="../static/menu.xhtml" />
+		</ui:insert>
+	</div>
 	<h:form>
 	<div class="container">
 		<h:messages globalOnly="false" showDetail="true"/>
+		<p:dataTable value="#{equiposMB.equipos}" var="">
+			<p:column>
+				<f:facet name="header"><h:outputLabel value="AFC" /></f:facet>
+				<h:outputLabel value="" />
+			</p:column>
+			<p:column>
+				<f:facet name="header"><h:outputLabel value="CAF" /></f:facet>
+				<h:outputLabel value="" />
+			</p:column>
+			<p:column>
+				<f:facet name="header"><h:outputLabel value="CONCACAF" /></f:facet>
+				<h:outputLabel value="" />
+			</p:column>
+			<p:column>
+				<f:facet name="header"><h:outputLabel value="CONMEBOL" /></f:facet>
+				<h:outputLabel value="" />
+			</p:column>
+			<p:column>
+				<f:facet name="header"><h:outputLabel value="OFC" /></f:facet>
+				<h:outputLabel value="" />
+			</p:column>
+			<p:column>
+				<f:facet name="header"><h:outputLabel value="UEFA" /></f:facet>
+				<h:outputLabel value="" />
+			</p:column>
+		</p:dataTable>
 		<p:panelGrid>
 			<f:facet name="header">
 				<p:row>

@@ -1,16 +1,98 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
-</h:head> 
-<body> 
-	<ui:insert name="header">
-		<ui:include src="../static/banner.xhtml" />
-		<ui:include src="../static/menu.xhtml" />
-	</ui:insert>
-</body> 
+	<h:outputScript name="scripts/jquery-1.11.1.js"></h:outputScript>
+	<h:outputScript name="scripts/scripts.js"></h:outputScript>
+</h:head>
+<body>
+	<div id="StaticMenu" class="">
+		<ui:insert name="header">
+			<ui:include src="../static/banner.xhtml" />
+			<ui:include src="../static/menu.xhtml" />
+		</ui:insert>
+	</div>
+	<div class="container fondo">
+		<div class="contenedorIzq">
+			<h1>COLOMBIA SE ENFRENTARA EN AMISTOSOS CONTRA SENEGAL Y
+				JORDANIA EN BUENOS AIRES</h1>
+			<br /> <br />
+			<h3>Este martes se confirmaron los rivales del combinado
+				nacional en su preparación para Brasil-2014</h3>
+			<br /> <br />
+			<p:graphicImage
+				value="../resources/images/noticiasIzq/SenVsCol.jpg" />
+			<br /> <br /> <br />
+			<p>La Selección Colombia jugará dos partido amistosos, contra
+				Senegal el 31 de mayo y contra Jordania el 6 de junio en Buenos
+				Aires en preparación para el Mundial de Brasil-2014, torneo en el
+				que el combinado nacional es cabeza de serie del Grupo C.</p>
+			<br />
+			<p>Así lo confirmó este martes el presidente de la Federación
+				Colombiana de Fútbol Luis Bedoya, quien en horas de la mañana había
+				descartado a Egipto como uno de los equipos a los enfrentaría el
+				combinado Nacional.</p>
+			<br />
+			<p>Colfútbol no informó, en un comunicado publicado en su página
+				web, cuáles serán los estadios en los que se disputarán ambos
+				encuentros. Se espera en los próximos días conocer tal información,
+				además, de los horarios y la venta de entradas para los aficionados.
+				Colombia debutará en el Mundial de Brasil-2014 el 14 de junio contra
+				Grecia en el Estadio Mineirão, de Belo Horizonte.</p>
+			<br /> <br />
+			<h3>Este es el comunicado de Colfútbol</h3>
+			<br /> <br />
+			<p:graphicImage
+				value="../resources/images/noticiasIzq/JorVsCol.jpg" />
+			<br /> <br /> <br />
+			<p>En su ruta final hacia la Copa Mundial de la FIFA Brasil 2014,
+				la Selección Colombia realizará dos juegos amistosos de preparación
+				en la ciudad de Buenos Aires (Argentina) ante las selecciones de
+				Senegal, el sábado 31 de mayo y ante Jordania el viernes 6 de junio.</p>
+			<br />
+			<p>La Federación Colombiana de Fútbol dará a conocer en los
+				próximos días mayores detalles acerca de los horarios definitivos,
+				venta de entradas y los estadios donde se disputarán estos dos
+				encuentros de preparación.</p>
+			<br />
+			<p>La selección africana de Senegal ocupa actualmente el puesto
+				63 en la Clasificación Mundial de la FIFA (para el mes de abril),
+				mientras Jordania, miembro de la Confederación Asiática, ocupa el
+				lugar número 64.</p>
+		</div>
+		<div class="contenedorDer">
+			<h1>Asi podrian ser los 23 de Pekerman</h1>
+			<br /> <br />
+			<p:graphicImage
+				value="../resources/images/noticiasDer/posibConv.jpg" />
+			<br /> <br /> <br />
+			<h3>El pasado martes 6 de mayo, se confirmaron los rivales del
+				combinado nacional en su preparación para Brasil-2014</h3>
+			<br /> <br /> <br />
+			<h1>KAKA Y RONALDINHO, FUERA DE LA LISTA MUNDIALISTA</h1>
+			<br /> <br />
+			<p:graphicImage value="../resources/images/noticiasDer/Brasil.jpg" />
+			<br /> <br /> <br />
+			<p>El seleccionador brasileño, Luiz Felipe Scolari, anunció la
+				lista de convocados para la Copa Mundial de la FIFA Brasil 2014™ en
+				la que figura el barcelonista Neymar y de la que fueron excluidos
+				figuras como Robinho, Kaká o Ronaldinho.</p>
+			<br />
+			<p>En la nómina de convocados, que tiene como base el equipo
+				campeón de la Copa FIFA Confederaciones 2013, se incluye a Marcelo,
+				lateral izquierdo del Real Madrid, y Daniel Alves, lateral derecho
+				del Barcelona.</p>
+			<br />
+			<p>El entrenador no quiso comentar los motivos de la exclusión de
+				los jugadores que no ha convocado y destacó que el equipo brasileño
+				es equilibrado, tiene un ambiente de grupo y está unido en el
+				objetivo común de ganar el Mundial.</p>
+		</div>
+	</div>
+</body>
 </html>

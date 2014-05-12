@@ -47,4 +47,42 @@
   <managed-bean-class>com.fifa.ubosque.worldcup.beans.Ingreso</managed-bean-class>
   <managed-bean-scope>request</managed-bean-scope>
  </managed-bean>
+ <managed-bean>
+  <managed-bean-name>partidosMB</managed-bean-name>
+  <managed-bean-class>com.fifa.ubosque.worldcup.beans.PartidosMB</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>estadiosMB</managed-bean-name>
+  <managed-bean-class>com.fifa.ubosque.worldcup.beans.EstadiosMB</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>equiposMB</managed-bean-name>
+  <managed-bean-class>com.fifa.ubosque.worldcup.beans.EquiposMB</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ <managed-bean>
+  <managed-bean-name>gruposMB</managed-bean-name>
+  <managed-bean-class>com.fifa.ubosque.worldcup.beans.GruposMB</managed-bean-class>
+  <managed-bean-scope>request</managed-bean-scope>
+ </managed-bean>
+ <navigation-rule>
+  <from-view-id>*.*</from-view-id>
+  <navigation-case>
+   <from-outcome>iniciarSesion</from-outcome>
+   <to-view-id>/principal/index.xhtml</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>listaEquipos</from-outcome>
+   <to-view-id>/principal/equipos.xhtml</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+ <navigation-rule>
+  <from-view-id>*.*</from-view-id>
+  <navigation-case>
+   <from-outcome>adminSesion</from-outcome>
+   <to-view-id>/admin/AdminGrupos.xhtml</to-view-id>
+  </navigation-case>
+ </navigation-rule>
 </faces-config>

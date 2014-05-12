@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11/05/2014 02:01:13 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.fifa.ubosque.worldcup.entities.Partidos" table="partidos" catalog="worldcup2014">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="equipoLocal" type="int">
+            <column name="equipo_local" not-null="true" />
+        </property>
+        <property name="equipoVisitante" type="int">
+            <column name="equipo_visitante" not-null="true" />
+        </property>
+        <property name="fase" type="string">
+            <column name="fase" length="100" not-null="true" />
+        </property>
+        <property name="golesLocal" type="int">
+            <column name="goles_local" not-null="true" />
+        </property>
+        <property name="golesVisitante" type="int">
+            <column name="goles_visitante" not-null="true" />
+        </property>
+        <property name="autogolesLocal" type="int">
+            <column name="autogoles_local" not-null="true" />
+        </property>
+        <property name="autogolesVisitante" type="int">
+            <column name="autogoles_visitante" not-null="true" />
+        </property>
+        <property name="penaltiesLocal" type="int">
+            <column name="penalties_local" not-null="true" />
+        </property>
+        <property name="penaltiesVisitante" type="int">
+            <column name="penalties_visitante" not-null="true" />
+        </property>
+        <property name="sede" type="int">
+            <column name="sede" not-null="true" />
+        </property>
+        <property name="arbitro1" type="int">
+            <column name="arbitro_1" not-null="true" />
+        </property>
+        <property name="arbitro2" type="java.lang.Integer">
+            <column name="arbitro_2" />
+        </property>
+        <property name="arbitro3" type="java.lang.Integer">
+            <column name="arbitro_3" />
+        </property>
+        <property name="arbitro4" type="java.lang.Integer">
+            <column name="arbitro_4" />
+        </property>
+        <property name="arbitro5" type="java.lang.Integer">
+            <column name="arbitro_5" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="fecha" length="19" not-null="true" />
+        </property>
+        <property name="idEstadoPartido" type="int">
+            <column name="id_estado_partido" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

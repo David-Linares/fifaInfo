@@ -13,8 +13,27 @@ a{
 a:VISITED{
 	color: #00356a;
 }
+.label{
+	font-style: oblique;	
+}
 input[type=text],input[type=password]{
 	outline: none;
+	border-radius: 5px;
+	border: 1px #c5c5c5 solid;
+	padding: 3px; 
+}
+input[type=text]:focus,input[type=password]:focus{
+	box-shadow: 0px 0px 5px #1E79EC;
+}
+input[type=button],input[type=submit], input[type=reset]{
+	padding: 4px;
+	border: 1px #b5b5b5 solid;
+	background: #f3f3f3;
+	margin: 5px;
+}
+.botonesAlineados{
+	display: inline-block;
+	vertical-align: top;
 }
 .banner{
 	height: 100px;
@@ -26,12 +45,7 @@ input[type=text],input[type=password]{
 	display:inline-block;
 	height: 100%;
 }
-.banner .imgizq{
-	width: 20%;
-}
-.banner .imgder{
-	width: 59%;
-}
+
 .menuContainer{
 	margin-top: 20px;
 	border-top: 1px solid #D9EFFC;
@@ -47,7 +61,7 @@ ul.menuEnc li{
 	display: inline-block;
 	list-style: none;
 	padding: 15px 50px;
-	border-left: 1px solid #f1f1f1;
+	border-left: 1px solid #f1f1f1;	
 }
 ul.menuEnc li:hover{
 	background-color: #f2f2f2;
@@ -68,8 +82,8 @@ ul.menuEnc li:hover{
 	width: 20px;
 }
 .tablaPartidos{
-	width: 500px;
-	margin: 20px;
+	width: 200px;
+	margin: 10px;
 	text-align: center;	
 }
 .iconAdd{
@@ -90,3 +104,73 @@ ul.menuEnc li:hover{
 	font-family: worldCup !important;
 	font-weight: normal;
 }
+.acordeonPartidos{
+	width: 400px !important;
+	display: inline-block;
+	margin: 10px !important;
+	vertical-align: top;
+}
+.menuEstatico{
+	position: fixed;
+	background-color: #fff;
+	margin-top: -10px;
+}
+/*LIZ*/
+.contenedorIzq, .contenedorDer{
+	color: #666666;
+	display: inline-block;
+	vertical-align: top;
+	
+}
+
+.contenedorIzq{
+	width: 49%;
+	/*background-color: #DFF2FD;*/	
+}
+
+img{
+	width:90%;
+}
+
+.contenedorDer{
+	width:48%;
+}
+.contenedorInf{
+	width:100%;
+}
+h1{
+	font-family: worldcup;
+	color: #00356A
+}
+h3{
+	color: #198BBD/*#0087E6*/
+}
+.fondo{
+	background-image: url(../resources/images/noticiasInf/FIFA-World-Cup-2014_2.png);
+}
+.menuStatic{
+	position:fixed;
+}
+
+
+/*Media Queries -- Responsive*/
+
+@media (max-width: 1370px){
+	ul.menuEnc li{
+		padding: 15px 50px;	
+	}
+}
+@media (max-width: 1050px){
+	.container{
+		padding: 50px 50px;
+	}
+	.contenedorIzq, .contenedorDer{
+		display: block;
+		vertical-align: inherit;
+		width: 100%;
+	}
+	ul.menuEnc{
+		margin: 0 50px;
+	}
+}
+

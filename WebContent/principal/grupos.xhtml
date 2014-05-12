@@ -7,13 +7,36 @@
 
 <h:head>
 	<h:outputStylesheet name="styles.css"></h:outputStylesheet>
-</h:head> 
-<body> 
-	<ui:insert name="header">
-		<ui:include src="../static/banner.xhtml" />
-		<ui:include src="../static/menu.xhtml" />
-	</ui:insert>
+	<h:outputScript name="scripts/jquery-1.11.1.js"></h:outputScript>
+	<h:outputScript name="scripts/scripts.js"></h:outputScript>
+</h:head>
+<body>
+	<div id="StaticMenu" class="">
+		<ui:insert name="header">
+			<ui:include src="../static/banner.xhtml" />
+			<ui:include src="../static/menu.xhtml" />
+		</ui:insert>
+	</div>
 	<div class="container">
+		<p:dataTable value="#{gruposMB.listaGrupos}" var="grupo">
+			<f:facet name="header">
+				<h:outputLabel value="#{grupo.nombre}" />
+			</f:facet>
+			<p:columnGroup type="header">
+				<p:row>
+					<p:column headerText="Posición"/>
+					<p:column headerText="Equipo"/>
+					<p:column headerText="Puntos"/>
+					<p:column headerText="PJ"/>
+					<p:column headerText="PG"/>
+					<p:column headerText="PE"/>
+					<p:column headerText="PP"/>
+					<p:column headerText="GF"/>
+					<p:column headerText="GC"/>
+					<p:column headerText="DG"/>
+				</p:row>
+			</p:columnGroup>
+		</p:dataTable>
 		<p:panelGrid styleClass="tablaPartidos">
 			<f:facet name="header">  
 				<p:row>
